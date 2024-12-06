@@ -1,9 +1,15 @@
+import { useState } from "react";
 import { BiSearch, BiCurrentLocation } from "react-icons/bi";
-const inputs = () => {
+const inputs = ({setQuery, setUnits}) => {
+  const[city, setCity]=useState('')
+
+  
   return (
     <div className="flex flex-row justify-center my-6">
     <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
         <input 
+        value={city}
+        onChange={(e) => setCity(e.currentTarget.value)}
         type ="text"
          placeholder="search by city..."
          className="text-gray-500 text-xl font-light p-2 w-full shadow-xl
