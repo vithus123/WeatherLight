@@ -3,7 +3,12 @@ import { BiSearch, BiCurrentLocation } from "react-icons/bi";
 const inputs = ({setQuery, setUnits}) => {
   const[city, setCity]=useState('')
 
-  
+  const handleSearchClick =() =>{
+    if(city !=="") setQuery({ q: city});
+  }
+
+
+
   return (
     <div className="flex flex-row justify-center my-6">
     <div className="flex flex-row w-3/4 items-center justify-center space-x-4">
@@ -18,6 +23,7 @@ const inputs = ({setQuery, setUnits}) => {
    <BiSearch 
    size={30} 
    className="cursor-pointer transition ease-out hover:scale-125"
+   onClick={handleSearchClick}
     /> 
   
    <BiCurrentLocation
