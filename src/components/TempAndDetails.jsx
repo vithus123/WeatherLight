@@ -16,6 +16,7 @@ const TempAndDetails = ({ weather }) => {
         humidity,
         feels_like,
     } = weather;
+    
 
     const verticalDetails = [
         {
